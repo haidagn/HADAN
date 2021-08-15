@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -19,7 +18,7 @@ html body {
 *:after,
 *:before {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 input,
@@ -59,11 +58,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 50px;
   position: relative;
 }
@@ -85,8 +84,8 @@ body {
   display: flex;
   gap: 40px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar-links_item a {
@@ -124,8 +123,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #292929;
   --ionicon-stroke-width: 28px;
   display: none;
@@ -133,16 +132,21 @@ body {
 
 .navbar-links-mb {
   position: absolute;
-  top: 120px;
+  top: 100px;
   right: calc(5% / 2);
   background-color: #fff;
   -webkit-box-shadow: 2px 2px 20px rgba(146, 146, 146, 0.267);
-  box-shadow: 2px 2px 20px rgba(146, 146, 146, 0.267);
+          box-shadow: 2px 2px 20px rgba(146, 146, 146, 0.267);
   border-radius: 30px;
   padding: 20px;
   width: 95%;
   z-index: 99;
-  display: none;
+  -webkit-transform: translateY(-160%);
+          transform: translateY(-160%);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 .navbar-links-mb_item a {
@@ -163,13 +167,13 @@ body {
   width: 40px;
   border-radius: 30px;
   -webkit-box-shadow: 2px 2px 20px rgba(211, 211, 211, 0.247);
-  box-shadow: 2px 2px 20px rgba(211, 211, 211, 0.247);
+          box-shadow: 2px 2px 20px rgba(211, 211, 211, 0.247);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 0;
   margin-top: 0;
 }
@@ -191,8 +195,10 @@ body {
   color: #e9e9e9 !important;
 }
 
-.navbar .navbar-input:checked~.navbar-links-mb {
+.navbar .navbar-input:checked ~ .navbar-links-mb {
   display: block;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .banner {
@@ -203,11 +209,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .banner-left {
@@ -220,8 +226,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #e2eaed;
   max-width: 360px;
   height: 35px;
@@ -237,11 +243,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .banner-left_tag-icon ion-icon {
@@ -313,7 +319,7 @@ body {
   border-radius: 60px;
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 40px #6a6c7171;
-  box-shadow: 2px 2px 40px #6a6c7171;
+          box-shadow: 2px 2px 40px #6a6c7171;
   margin-bottom: 55px;
   margin-top: 55px;
   margin-right: 72px;
@@ -328,42 +334,35 @@ body {
 @media screen and (max-width: 900px) {
   .navbar {
     margin-bottom: 70px;
+    padding-top: 20px;
   }
-
   .navbar .navbar-links_item a {
     display: none;
   }
-
   .navbar-linkstoggle {
     display: block;
-    margin-right: 20px;
   }
-
   .banner {
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   .banner-right {
     display: none;
   }
-
   .banner-left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
-
   .banner-left_tag {
     margin: 0 auto;
   }
-
   .banner-left_btn {
     margin: 0 auto;
     margin-bottom: 30px;
@@ -371,30 +370,32 @@ body {
 }
 
 @media screen and (max-width: 470px) {
+  .navbar {
+    padding-top: 0px;
+  }
+  .navbar-logo a {
+    font-size: 24px;
+  }
   .banner-left_tag {
     font-size: 12px;
   }
-
   .banner-left_tag p {
     margin-right: 10px;
   }
-
   .banner-left_title {
     font-size: 40px;
     line-height: 50px;
     margin-top: 20px;
   }
-
   .banner-left_btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   .banner-left_btn-1 {
     margin: 0px auto;
     font-size: 12px;
@@ -403,10 +404,8 @@ body {
     line-height: 40px;
     margin-bottom: 40px;
   }
-
   .banner-left_btn-2 {
     display: none;
   }
 }
-
 /*# sourceMappingURL=app.css.map */
